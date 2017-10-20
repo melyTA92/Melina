@@ -1,0 +1,123 @@
+﻿
+
+
+
+/*MANTENGA COMENTADA ESTA PARTE HASTA EL FINAL*/
+
+section#left {
+	float:left;
+	width:70%;
+	
+}
+aside#right {
+	float:right;
+	width:25%;
+}
+
+
+footer#footer {
+	clear:both;
+}
+ h1{ 
+	color: blue;
+	text-align: center;
+ }
+ *{
+ 	font-family: Verdana;
+ }
+ 
+#cabecera>img{
+ 	width: 10%;
+ 	display:block;
+ 	margin-left: auto;
+ 	margin-right: auto;
+
+ 		
+ }
+	.elemento-menu{
+ 	display:inline;
+ 	list-style-type: none;
+ }
+ 
+#menu{
+
+	text-align: center;
+ }
+
+ /*no entiendo bien si deberian ir junto*/
+
+ /*Todas las etiquetas hijas que se encuentren en el footer, con identificador “footer”, se el
+estilo un itálica.*/
+ 
+footer[id="footer"]{
+ 	font-style: italic;
+ }
+ 
+/*Alinee al centro el texto del footer, con identificador “footer”*/
+ footer[id="footer"]{
+ 	text-align: center;
+ }
+ 
+/*Dentro de aside, al primer hermano de h3 que sea h4, aplique:
+o font-style: italic
+o color: green*/
+
+
+aside#right h3+h4{	color:green;
+ 	font-style: italic
+ }
+ 
+/*Dentro de aside, a todos los elementos hermanos de h5 que sean p, aplique:
+o font-size: 8pt*/
+aside#right h5~p{
+	font-size: 8pt;
+}
+
+/*Dentro del aside, todos los h5, cuyo atributo title termine con “small” debe mostrarlos
+subrayados.*/
+
+aside#right h5[title$="small"]{
+	text-decoration: underline;
+}
+
+/*Dentro del aside, todos los li cuyo valor del atributo name sea “fork”, aplique:
+o list-style-image: url(“https://goo.gl/y0yaro”)
+*/
+
+
+
+aside#right~li[name="fork"]{
+	list-style-image: url(“https://goo.gl/y0yaro”);
+}
+
+/*no funciona*/
+
+
+aside ul li[name="fork"]{
+	list-style-image: url('https://goo.gl/y0yaro');
+}
+
+
+
+
+/*13. Solamente las etiquetas a que se encuentren dentro de nav, ul y li, tendrán las siguientes
+propiedades:
+o hover
+§ color:green*/ 
+nav ul +li:hover{
+	color:green;
+}
+/*Solamente para aquellas etiquetas p con la clase “descripcion”, se activará el first-letter
+con un tamaño de 22pt y font-weight como bold.*/
+p.descripcion::first-letter{
+font-size: 22pt;
+font-weight: bold;
+}
+
+/*Dentro de los artículos de la zona central, centre las imágenes y redimensiónelas a un
+ancho del 15%*/
+section#left article img{
+	display: block;
+	margin: auto;
+	width: 15%;
+}
